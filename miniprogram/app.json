@@ -1,0 +1,30 @@
+{
+  "cloud": true,
+  "pages": [
+    "pages/index/index",
+    "pages/change/change",
+    "pages/history/history"
+  ],
+  "window": {
+    "backgroundColor": "#333",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#333",
+    "navigationBarTitleText": "VChat 翻译",
+    "navigationBarTextStyle": "write"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/soutu123.png",
+      "selectedIconPath": "images/soutu123.png"
+    },
+    {
+      "pagePath": "pages/index/index",
+      "text": "图标",
+      "iconPath": "images/soutu123.png",
+      "selectedIconPath": "images/soutu123.png"
+    }]
+  }
+
+}
