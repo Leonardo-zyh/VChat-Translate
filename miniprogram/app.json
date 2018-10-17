@@ -6,25 +6,26 @@
     "pages/history/history"
   ],
   "window": {
-    "backgroundColor": "#333",
+    "backgroundColor": "red",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#333",
     "navigationBarTitleText": "VChat 翻译",
     "navigationBarTextStyle": "write"
   },
   "tabBar": {
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "首页",
-      "iconPath": "images/soutu123.png",
-      "selectedIconPath": "images/soutu123.png"
-    },
-    {
-      "pagePath": "pages/index/index",
-      "text": "图标",
-      "iconPath": "images/soutu123.png",
-      "selectedIconPath": "images/soutu123.png"
-    }]
+    "borderStyle": "white",
+    "position": "top",
+    "color": "#595959",
+    "selectedColor": "#1c1b21",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "翻译"
+      },
+      {
+        "pagePath": "pages/history/history",
+        "text": "历史"
+      }
+    ]
   }
-
 }
