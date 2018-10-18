@@ -27,7 +27,8 @@ Page({
 
   },
   onInput: function (e) {
-    this.setData({ 'query': e.detail.value })
+    let query = e.detail.value.replace(/^\s*/, "")
+    this.setData({ 'query': query })
     if (this.data.query.length > 0) {
       this.setData({ 'hideClearIcon': false })
     } else {
@@ -43,11 +44,14 @@ Page({
     if (!this.data.query) return
     translate(this.data.query, { from: 'auto', to: this.data.curLang.lang }).then(res => {
       this.setData({ 'result': res.trans_result })
-
-      let history = wx.getStorageSync('history') || []
-      history.unshift({ query: this.data.query, result: res.trans_result[0].dst })
+      let history = wx.getStorageSync('history') || [{ query: ".", result: "." }]
+        if (history[0].query != this.data.query && history[0].result != res.trans_result[0].dst) {
+          history.unshift({ query: this.data.query, result: res.trans_result[0].dst })
+        }
+      
       history.length = history.length > 15 ? 15 : history.length
       wx.setStorageSync('history', history)
+      console.log(history)
     })
   }
 })
