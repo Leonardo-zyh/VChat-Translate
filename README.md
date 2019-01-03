@@ -8,3 +8,4 @@
 - 本地存储
 - 百度翻译API
 - 等等
+<img src="./VChat.jpg"></img>
